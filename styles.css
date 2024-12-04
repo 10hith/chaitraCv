@@ -31,23 +31,39 @@ body {
 
 /* Header Styles */
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile-info {
+    flex: 0 1 50%;  /* Don't grow, can shrink, base width 50% */
+    min-width: 300px;
+    max-width: 50%;
+    padding-right: 1rem;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: right;
+    min-width: 300px;
 }
 
 .profile-info h1 {
+    margin: 0;
     color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2em;
+    line-height: 1.2;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .profile-info .title {
+    margin: 0.5rem 0;
     color: var(--secondary-color);
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 .contact-info p {
@@ -60,10 +76,19 @@ header {
     margin-right: 10px;
 }
 
+/* Profile Image Styles */
+.profile-image {
+    display: block;
+    max-width: 100px;
+    height: auto;
+    margin: 0.5rem 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Section Styles */
 section {
-    margin: 2rem 0;
-    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
 section h2 {
@@ -83,9 +108,14 @@ section h2 i {
     margin: 1.5rem 0;
 }
 
-.experience-item h3, .education-item h3 {
+.experience-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .company, .school {
@@ -99,6 +129,14 @@ section h2 i {
     margin-bottom: 0.5rem;
 }
 
+.experience-item ul {
+    margin: 0.5rem 0 0 1rem;
+}
+
+.experience-item li {
+    margin: 0.3rem 0;
+}
+
 /* Timeline Styles */
 .timeline {
     position: relative;
@@ -107,8 +145,8 @@ section h2 i {
 
 .timeline-item {
     position: relative;
-    padding: 20px 0;
-    padding-left: 40px;
+    padding: 10px 0;
+    padding-left: 30px;
 }
 
 .timeline-dot {
@@ -125,8 +163,8 @@ section h2 i {
 .timeline-connector {
     position: absolute;
     left: 7px;
-    top: 35px;
-    bottom: -20px;
+    top: 25px;
+    bottom: -10px;
     width: 2px;
     background: var(--secondary-color);
 }
@@ -136,8 +174,9 @@ section h2 i {
 }
 
 .timeline-content {
+    padding: 1rem;
+    margin-bottom: 1rem;
     background: white;
-    padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -149,7 +188,7 @@ section h2 i {
 
 .timeline-content h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .timeline-content .company {
@@ -161,6 +200,61 @@ section h2 i {
 .timeline-content .duration {
     color: #666;
     font-style: italic;
+}
+
+.timeline-content p {
+    margin: 0.3rem 0;
+}
+
+/* Experience Summary Styles */
+.experience-summary {
+    margin: 1rem 0;
+}
+
+.experience-summary h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.experience-subsection {
+    margin-bottom: 1.5rem;
+}
+
+.experience-subsection h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-subsection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-subsection li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.experience-subsection li:before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Horizontal Alignment for Education and Personal Information */
+.education-and-personal-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.education,
+.personal-information {
+    flex: 1;
 }
 
 /* Skills Section */
@@ -188,7 +282,7 @@ section h2 i {
 
 /* Core Competencies Styles */
 .core-competencies {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .competency-grid {
@@ -272,5 +366,230 @@ li {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Projects Section Styles */
+.projects {
+    margin-top: 0.5rem;
+}
+
+.project-item {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+.project-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+    font-size: 1.2em;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
+}
+
+.project-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+    font-size: 0.9em;
+}
+
+.project-meta p {
+    margin: 0;
+}
+
+.project-overview, .role-description {
+    margin: 0.5rem 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.responsibilities h4 {
+    color: var(--primary-color);
+    margin: 0.5rem 0 0.3rem 0;
+    font-size: 1em;
+}
+
+.responsibilities ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.responsibilities li {
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+    font-size: 0.9em;
+}
+
+/* Print styles for projects */
+@media print {
+    .project-item h3 {
+        font-size: 12pt;
+    }
+
+    .project-header,
+    .project-meta,
+    .project-overview,
+    .role-description,
+    .responsibilities li {
+        font-size: 10pt;
+        line-height: 1.3;
+    }
+
+    .responsibilities h4 {
+        font-size: 11pt;
+    }
+}
+
+/* Print Styles */
+@media print {
+    @page {
+        margin: 1.5cm;
+        size: A4;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        line-height: 1.3;
+        background: none;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    /* Adjust header for print */
+    header {
+        margin-bottom: 0.5cm;
+    }
+
+    h1 {
+        font-size: 18pt;
+        color: var(--primary-color);
+    }
+
+    h2 {
+        font-size: 14pt;
+        margin-top: 0.5cm;
+        color: var(--primary-color);
+    }
+
+    h3 {
+        font-size: 12pt;
+        color: var(--secondary-color);
+    }
+
+    /* Adjust timeline for print */
+    .timeline-content {
+        padding: 0.5cm;
+        margin-bottom: 0.3cm;
+        box-shadow: none;
+        border: 1px solid var(--secondary-color);
+    }
+
+    .timeline-dot {
+        border: 2px solid var(--secondary-color);
+        background: var(--secondary-color);
+    }
+
+    .timeline-connector {
+        background: var(--secondary-color);
+    }
+
+    /* Adjust competency grid for print */
+    .competency-grid {
+        gap: 0.5cm;
+    }
+
+    .competency-item {
+        padding: 0.3cm;
+        box-shadow: none;
+        border: 1px solid var(--secondary-color);
+    }
+
+    /* Remove color override for icons */
+    .fas, .fab {
+        color: var(--secondary-color) !important;
+    }
+
+    /* Keep original colors */
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --text-color: #333;
+    }
+
+    /* Keep link colors */
+    a {
+        color: var(--secondary-color);
+    }
+
+    .title, .company {
+        color: var(--secondary-color);
+    }
+
+    /* Ensure contact info stays on right in print */
+    .profile-info, .contact-info {
+        flex-basis: auto;
+        min-width: unset;
+    }
+
+    /* Adjust spacing for competency grid in print */
+    .competency-grid {
+        margin-top: 0.2cm;
+    }
+
+    section {
+        margin: 0.3cm 0;
+    }
+
+    .summary {
+        margin-top: 0.2cm;
+    }
+
+    /* Print-specific adjustments */
+    .profile-info {
+        flex: 0 1 50%;
+        max-width: 50%;
+        padding-right: 1cm;
+    }
+
+    .profile-info h1 {
+        font-size: 18pt;
+        line-height: 1.2;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .contact-info {
+        flex: 1;
+    }
+
+    .education-and-personal-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;  
+        page-break-inside: avoid;
+    }
+
+    .education, .personal-information {
+        flex: 1;
     }
 }
