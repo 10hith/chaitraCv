@@ -229,6 +229,103 @@ section h2 i {
     margin: 0.3rem 0;
 }
 
+/* Two-Column Timeline Styles */
+.timeline-2col {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.timeline-2col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--secondary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-2col .timeline-item {
+    position: relative;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.timeline-2col .timeline-item:nth-child(odd) {
+    margin-right: auto;
+    padding-right: 30px;
+    text-align: right;
+}
+
+.timeline-2col .timeline-item:nth-child(even) {
+    margin-left: auto;
+    padding-left: 30px;
+}
+
+.timeline-2col .timeline-dot {
+    position: absolute;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+    z-index: 1;
+}
+
+.timeline-2col .timeline-item:nth-child(odd) .timeline-dot {
+    right: -7px;
+}
+
+.timeline-2col .timeline-item:nth-child(even) .timeline-dot {
+    left: -7px;
+}
+
+.timeline-2col .timeline-content {
+    padding: 0.8rem;
+    background-color: rgba(245, 246, 250, 0.7);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-2col .timeline-content h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1.1em;
+    color: var(--primary-color);
+}
+
+.timeline-2col .timeline-content p {
+    margin: 0.2rem 0;
+    font-size: 0.95em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .timeline-2col::before {
+        left: 20px;
+    }
+    
+    .timeline-2col .timeline-item {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding-left: 45px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+    
+    .timeline-2col .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-2col .timeline-item:nth-child(even) .timeline-dot {
+        left: 13px;
+        right: auto;
+    }
+}
+
 /* Experience Summary Styles */
 .experience-summary {
     margin: 1rem 0;
