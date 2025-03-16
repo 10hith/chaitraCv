@@ -238,17 +238,6 @@ section h2 i {
     justify-content: space-between;
 }
 
-.timeline-2col::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background-color: var(--secondary-color);
-    transform: translateX(-50%);
-}
-
 .timeline-2col .timeline-item {
     position: relative;
     width: 48%;
@@ -257,18 +246,20 @@ section h2 i {
 
 .timeline-2col .timeline-item:nth-child(odd) {
     margin-right: auto;
-    padding-right: 30px;
-    text-align: right;
+    padding-left: 40px;
+    text-align: left;
 }
 
 .timeline-2col .timeline-item:nth-child(even) {
     margin-left: auto;
-    padding-left: 30px;
+    padding-left: 40px;
+    text-align: left;
 }
 
 .timeline-2col .timeline-dot {
     position: absolute;
     top: 15px;
+    left: 13px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -278,12 +269,9 @@ section h2 i {
     z-index: 1;
 }
 
-.timeline-2col .timeline-item:nth-child(odd) .timeline-dot {
-    right: -7px;
-}
-
+.timeline-2col .timeline-item:nth-child(odd) .timeline-dot,
 .timeline-2col .timeline-item:nth-child(even) .timeline-dot {
-    left: -7px;
+    left: 13px;
 }
 
 .timeline-2col .timeline-content {
@@ -314,7 +302,7 @@ section h2 i {
         width: 100%;
         margin-right: 0 !important;
         margin-left: 0 !important;
-        padding-left: 45px !important;
+        padding-left: 40px !important;
         padding-right: 0 !important;
         text-align: left !important;
     }
@@ -579,6 +567,7 @@ li {
     }
 
     body {
+        background-color: white;
         margin: 0;
         padding: 0;
         font-size: 11pt;
@@ -587,14 +576,14 @@ li {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
-
+    
     .container {
         max-width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 1rem;
         box-shadow: none;
     }
-
+    
     /* Adjust header for print */
     header {
         margin-bottom: 0.5cm;
@@ -614,39 +603,6 @@ li {
     h3 {
         font-size: 12pt;
         color: var(--secondary-color);
-    }
-
-    /* Adjust timeline for print */
-    .timeline-content {
-        padding: 0.5cm;
-        margin-bottom: 0.3cm;
-        box-shadow: none;
-        border: 1px solid var(--secondary-color);
-    }
-
-    .timeline-dot {
-        border: 2px solid var(--secondary-color);
-        background: var(--secondary-color);
-    }
-
-    .timeline-connector {
-        background: var(--secondary-color);
-    }
-
-    /* Adjust competency grid for print */
-    .competency-grid {
-        gap: 0.5cm;
-    }
-
-    .competency-item {
-        padding: 0.3cm;
-        box-shadow: none;
-        border: 1px solid var(--secondary-color);
-    }
-
-    /* Remove color override for icons */
-    .fas, .fab {
-        color: var(--secondary-color) !important;
     }
 
     /* Keep original colors */
@@ -671,19 +627,6 @@ li {
         min-width: unset;
     }
 
-    /* Adjust spacing for competency grid in print */
-    .competency-grid {
-        margin-top: 0.2cm;
-    }
-
-    section {
-        margin: 0.3cm 0;
-    }
-
-    .summary {
-        margin-top: 0.2cm;
-    }
-
     /* Print-specific adjustments */
     .profile-info {
         flex: 0 1 50%;
@@ -701,15 +644,75 @@ li {
     .contact-info {
         flex: 1;
     }
-
-    .education-and-personal-info {
+    
+    /* Ensure two-column timeline stays in two columns when printing */
+    .timeline-2col {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        gap: 1rem;  
-        page-break-inside: avoid;
     }
-
-    .education, .personal-information {
-        flex: 1;
+    
+    .timeline-2col .timeline-item {
+        position: relative;
+        width: 48%;
+        margin-bottom: 20px;
+        page-break-inside: avoid; /* Prevent items from breaking across pages */
+        break-inside: avoid; /* Modern browsers */
+    }
+    
+    .timeline-2col .timeline-item:nth-child(odd) {
+        margin-right: auto;
+        padding-left: 40px;
+        text-align: left;
+    }
+    
+    .timeline-2col .timeline-item:nth-child(even) {
+        margin-left: auto;
+        padding-left: 40px;
+        text-align: left;
+    }
+    
+    .timeline-2col .timeline-dot {
+        position: absolute;
+        top: 15px;
+        left: 13px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--secondary-color) !important;
+        border: 2px solid white;
+        box-shadow: 0 0 0 2px var(--secondary-color);
+        z-index: 1;
+        print-color-adjust: exact; /* For Chrome */
+        -webkit-print-color-adjust: exact; /* For Safari */
+    }
+    
+    .timeline-2col .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-2col .timeline-item:nth-child(even) .timeline-dot {
+        left: 13px;
+    }
+    
+    /* Override any media query that might collapse to single column */
+    .timeline-2col .timeline-item {
+        width: 48% !important;
+        padding-left: 40px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+    
+    .timeline-2col .timeline-item:nth-child(odd) {
+        margin-right: auto !important;
+        margin-left: 0 !important;
+    }
+    
+    .timeline-2col .timeline-item:nth-child(even) {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+    
+    .timeline-2col .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-2col .timeline-item:nth-child(even) .timeline-dot {
+        left: 13px !important;
+        right: auto !important;
     }
 }
