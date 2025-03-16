@@ -66,6 +66,29 @@ header {
     font-size: 1.2em;
 }
 
+.profile-info .title:first-of-type {
+    font-weight: 700;
+}
+
+.profile-info .smaller-text {
+    font-size: 0.9em;
+}
+
+/* AWS Certification Badge */
+.certification-badge {
+    display: inline-block;
+    background-color: var(--secondary-color); /* Using the secondary color from the theme */
+    color: white;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 4px 8px;
+    margin: 0.5rem 0;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 .contact-info p {
     margin: 0.5rem 0;
 }

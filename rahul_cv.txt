@@ -1,0 +1,224 @@
+RAHUL M PALLIYALIL 
+29 Holywell Close, Orpington, BR6 9XP 
+✉ rahulmp.87@gmail.com 
+☎ 07446933210 
+Summary 
+● Software engineer with 7 years of golang experience 
+● Technologies:  Golang, AWS, Kubernetes, Terraform, Devops, Kafka, Lambda, Graphql, 
+Grpc, REST, Postgresql, Mongo 
+● AWS certified solution architect 
+● Azure cloud adoption framework (CAF) terraform open source contributor 
+https://github.com/aztfmod/terraform-azurerm-caf 
+Work Experience 
+Curve:  Backend Engineer (Contract)  
+(Jan 2024 – Till Date)  
+● Technologies - Golang, AWS, Kubernetes, REST, Graphql, Grpc 
+● Curve is a digital wallet that connects all funding cards into a single debit card 
+● Working as a part of the curve onboarding product selector team , contributing to the 
+development and release of new Curve app versions. 
+● Developed various key features in golang including the introduction of the cooling off period 
+concept for new Curve accounts, enabling in app downgrades for users , applying voucher based 
+discounts for selected products, cards as an accessory etc 
+● Architecting and refactoring microservices to facilitate a graceful migration from product 
+selection version 1 to version 2 and finally to version 3 for both stripe and manual billing 
+customers.  
+● Migrating golang microservices that retrieve data using complex rego expressions to mongo 
+● Being part of the support rota to fix production bugs based on priority.  
+Hackathons Participated: 
+● AI Based Merchant Recommendations - Participated in a company wide hackathon to 
+recommend shopping preferences based on user transactions and won 3rd place.  
+Shell:  Senior Software Engineer (Contract)  
+(Oct 2022 – Dec 2023)  
+● Technologies - Golang, Java, AWS, Kubernetes, Terraform, Devops, Kafka, Lambda, Graphql, 
+REST, Postgresql, Mongo 
+● Working as a part of the shell charge works fleet team for clients such as Amazon. 
+● Writing microservices, lambda to consume telemetry from kafka, sqs queues , enriching the data 
+and publish enriched data to kafka 
+● Wrote graphql layer (including federation layer), auth workflow , subgraphs for the telematics api 
+● Configuring argocd, gitlab pipelines, dockerfiles and  helm charts for deploying services to 
+kubernetes and also to serverless world.  
+● Experience with databases such as postgres and mongo. 
+● Implementing service tests (godog) in golang and also extending the tests for the legacy services 
+written in Java. 
+Office for National Statistics (ONS):  Senior SC Cleared Software Engineer 
+(Contract)  
+(Dec 2021 – Oct 2022)  
+● Technologies - Golang, AWS, Kubernetes, Devops, Elasticsearch, Terraform, Kafka 
+● Greenfield development of different microservices in golang which communicate to each other 
+via kafka. 
+● Wrote a golang template for a clean architecture pattern, so that the team can use it as a baseline 
+for the creation of new microservices.  
+● Part of ONS backend publishing team 
+● Writing facade for elasticsearch and working with the elastic analytics and search engine 
+● Wrote different templates for elastic search queries for efficient retrieval of the documents stored 
+in the search engine. 
+● Configuring service level test framework in golang. 
+● Enhancing and bug fixing for the legacy applications written in Java 
+● Working with data driven templates written in golang.  
+Atos,Wokingham: Senior Software Engineer (Contract)  
+(Apr 2021 – Dec 2021)  
+● Part of Atos backend development team 
+Backend Development: 
+● Part of the portal backend team and leading portal backend development  
+● Writing different microservices in Golang following clean architecture patterns 
+● Writing RESTful apis, middlewares and focussing on test driven development  
+● Creating and maintaining OpenApi definitions ,documentations using stoplight 
+● Configuring service level test framework in go 
+● Building, testing and deploying to Azure kubernetes services (AKS) 
+Devops And Architecture: 
+● Being part of different architecture discussions across azure  
+● Written and contributed to the company adopted azure enterprise scale caf framework including 
+the landingzone and modules. 
+● Written terraform to configure apim, function app, frontdoor, app gateway, cdn, database 
+configuration etc  
+● Configured helm charts for packaging and argocd for deploying resources to kubernetes 
+following an app of apps approach.  
+CognitoiQ, Newbury: Senior Software Engineer  
+(Feb 2020 – Apr 2021)  
+● Part of CognitoiQ’s platform development team 
+● Working for different projects ranging from field services to logistics 
+Backend Development: 
+● Architecting and writing different lambda functions in Golang following the clean architecture 
+pattern for different projects 
+● Building, testing and deploying to AWS serverless world 
+● Writing behavior driven and integration tests in golang using docker containers 
+● Using Aurora serverless with MySQL and DynamoDB  for persistence 
+● Designing databases using star schema data warehousing architecture model  
+● Configuring RESTful apis via AWS api gateway 
+● Pairing and mentoring junior team members, organizing and running company-wide backend 
+guild  
+Devops Role: 
+● Using terraform to quickly write and deploy different AWS resources including SES 
+configurations, AWS secret manager , code pipelines, enabling VPC flow logs, setting up of VPC 
+peering , AWS data migration service  etc 
+● Using AWS Cognito for authentication and authorisation 
+● Configuring a generic lift and shift template written in python to support golang clean layered 
+architecture. 
+Certifications: 
+● During my time at CognitoiQ, I also managed to get the AWS Certified Solutions Architect 
+certification.  
+Personal Projects: 
+● Written a structured logging facade that uses standard logging library (eg zerolog, logrus) under 
+the hood 
+● Written a golang middleware library that can be used to set request ids, perform token validation 
+etc before reaching the target lambda 
+● Written a distributed tracing facade which uses opencensus and with different backend exporters 
+Kaluza (OVO Energy), London: Software Engineer 
+(Nov 2019 –Feb 2020)  
+● Part of Kaluza’s device integration team, integrating various devices to the grid 
+● Written Golang micro services to ingest and enrich telemetries and collect data.   
+● Test driven development using testify Mock, GoMock etc.  
+● Knowledge and experience working on Google cloud infrastructure 
+● Using datastore, elastic and storage buckets for persistence. 
+● Configured Logstash to pick up the events from Kafka, filter and push to ES 
+● Initiating communication between services using Kafka 
+● Configured modules, ACL for topics etc using terraform  
+● Written tests using frameworks such as GoDog, Gock ,etc 
+● configuring monitoring and alerting tool like Prometheus and configuring Graphana dashboards.  
+On the Dot, London: Backend Engineer 
+(Apr 2019 – Nov 2019)  
+● Supporting and maintaining On the Dot’s store to door delivery platform  
+● Written Golang micro services to initiate order booking, determine capacity in region for a 
+specific order etc.  
+● Emphasizing on clean architecture like Layered, Hexagonal etc and test driven development 
+● Knowledge and experience working on AWS infrastructure 
+● Using dynamoDB and s3 buckets for persistence. 
+● Initiating communication between services using AWS SNS and SQS. 
+● Experience with git version control. 
+● Experience writing service level tests and acceptance tests 
+● Experience with logging dashboard like Humio and tracing with Opensensus.  
+● Writing and improving on Restful apis, using Swagger for api definitions.  
+Schlumberger, Abingdon: Software Engineer (Full Stack) 
+(2016 – Apr 2019)  
+Backend stack: 
+● Written Golang micro services for gathering data, running simulations and run calculations.  
+● Configuring and Deploying services to GCP 
+● A mix of both Choreography and Orchestration architecture is used.  
+● Focussing on test driven development and go clean architecture 
+● Taking part in team software development architecture meetings. 
+● Developing and Maintaining  Restful apis (inc. use of swagger) 
+● Experience writing microservices for Google cloud platform 
+● Experience with Google PubSub messaging service 
+● Experience with Google protocol buffers, storage FUSE. 
+● Using  Google datastore and storage buckets for persistence 
+● Experience with docker and kubernetes 
+● Experience with git version control. 
+● Experience with other technologies like node, websockets 
+● Experience writing gauge api tests 
+Frontend stack: 
+● Experience in writing angular 6 typescript front end applications 
+● Experience with jasmine testing framework with karma test runner 
+● Focussing on test driven development 
+Devops: 
+● Creating groovy tasks for gradle build 
+● Running static code and dynamic api scans for different microservices 
+● Knowledge and experience in configuring builds on gocd  and vsts pipelines 
+Security: 
+● Knowledge and experience in implementing oauth2 protocol 
+Hackathons Participated: 
+● Let’s Monkey About - Injecting chaos into a running kubernetes cluster and monitoring the 
+performance , load balancing, finding possible solutions etc.  
+● Go Delve Debugging - Debugging multiple docker go containers, which communicate via 
+pubsub and REST. 
+● License Dashboard - Dashboard service created in Angular 2 that displays licensing information. 
+Schlumberger, Abingdon: Build and Release (Baseline) Engineer 
+(Dec 2013 – 2016)  
+Roles Include: 
+● Experience with cross platform continuous integration and delivery tools 
+● Configuring builds via continuous integration tool TeamCity, Microsoft TFS 
+● Writing Automated scripts mainly in python 
+● Deploying to Google cloud platform /Google app engine via Maven and gcloud. 
+● Running simulations on Microsoft Azure cloud.  
+● Maintaining and Supporting Perforce version control system 
+● Working on both windows and linux environment 
+● Experience with build tools like Make, CMake, Ant, Maven and SBT(Simple Build Tool) 
+● Maintaining and supporting Teamcity Build scripts in python, MSBuild 
+● Configuring customized reports via Report Builder 
+● Working with SQL Server Management Studio 
+● Technical analysis with large clients which involves running meetings on a regular basis 
+● Sending out Technical review status mail to teams and clients 
+● Follow up on actions based on Technical review meeting 
+● Running tests suits and making sure these are ready for release 
+● Configuring and Running tests on Microsoft Azure cloud, CentOS 
+● Experience working in automated deployment environment 
+● Updating status via Microsoft TFS 
+● Experience with Microsoft Visual Studio 
+● Experience with developing a Mean app with Angular2.0 Typescript 
+● Experience with using MongoDB as a part of the MEAN stack. 
+● Testing and Adding different tests to Perforce 
+● Personal Project  Validation code in C++ 
+Achievements: 
+● Deployed simple Spring mvc web api to Google app engine 
+● Written fully automated build script in python for library publish 
+● Configured tests to be submitted and run from cloud  
+● Presentations, Webinars and articles on various topics such as Continuous integration, code 
+reviews via crucible  
+● Experience working with automating deployments 
+● Written python scripts to enhance build performance 
+Markit, London: Associate Build Engineer 
+(May 2013– Sep 2013) 
+Roles Include: 
+● Maintaining Buildbot and configuring builders using python programming 
+● Writing build scripts in python 
+● Personally responsible for ensuring all the builds are green 
+● Experience with GNU make. 
+● Maintaining Perforce Version Management System, carried out an upgrade to latest 2013.1 
+perforce service 
+● Creating various perforce triggers to do pre-commit check on specific files 
+● Converting perl scripts to python 
+● Basics of Bash Scripting 
+MyDrive Solutions, Guildford: Graduate Software Engineer 
+(Nov 2012 – Mar 2013) 
+Roles Include: 
+● Working within Ruby on Rails and Sinatra web framework 
+● Writing and Fixing Rails RSpec tests cases. 
+● Test Driven Development 
+● Using RStudio to generate plots and graphs based on data through csv. 
+● Data analysis on research projects. 
+● Creating a visualisation tool for checking efficiency. 
+● Committing changes to Github. 
+Educational Qualification 
+Cardiff Metropolitan University, UK: MBA, International business – 2:1 
+Mahatma Gandhi University, India: B Tech, Computer Science & Engineering – 2:1 
+Certifications 
+AWS Certified solutions Architect - Associate
